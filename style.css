@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'Barlow Semi Condensed', Futura MdCn BT, AvenirNextCondensed-Italic, sans-serif;
   color: white;
   font-size: 30px; /* Adjusted font size */
   text-align: center;
@@ -12,7 +12,7 @@ a {
 }
 
 input[type='text'], select, button {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'Barlow Semi Condensed', Futura MdCn BT, AvenirNextCondensed-Italic, sans-serif;
   font-size: 18px; /* Adjusted font size */
 }
 
@@ -21,7 +21,7 @@ input[type='text'], select, button {
 }
 
 h1, h2, h3, h4, b, strong {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'Barlow Semi Condensed', Futura XBlkCnIt BT, AvenirNextCondensed-HeavyItalic, sans-serif;
 }
 
 h1 {
@@ -66,15 +66,6 @@ input:where([type='checkbox'], [type='radio']):checked {
 .small input:where([type='checkbox'], [type='radio']) {
   width:20px; /* Adjusted size */
   height:20px; /* Adjusted size */
-}
-
-#stress, .stress {
-  font-family: 'Barlow', sans-serif;
-  color: red;
-}
-
-#stress a {
-  color: red;
 }
 
 td {
