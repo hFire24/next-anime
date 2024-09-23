@@ -28,7 +28,7 @@
     <div class='four-list space'>
       <a data-tooltip="Wish-Granting Witch" class='hfire-link' href='https://www.crunchyroll.com/series/GR49140W6/magimoji-rurumo'>1 Majimoji Rurumo</a>
       <a data-tooltip="It's Pokemon!" class='hfire-link' href='https://www.amazon.com/gp/video/detail/B016569ACQ'>2 Pokemon XY</a>
-      <a data-tooltip="Shikanoko Nokonoko Koshitantan" class='hfire-link' href='https://www.crunchyroll.com/series/G0XHWM100/my-deer-friend-nokotan'>3 My Deer Friend Nokotan</a>
+      <a data-tooltip="2000s Sci-Fi Comedy" class='hfire-link' href='https://www.crunchyroll.com/series/GG5H5XMEP/sgt-frog'>3 Sgt. Frog</a>
       <a data-tooltip="2000s Magical Girl Spin-Off" class='hfire-link' href='https://www.crunchyroll.com/series/GRK5ZZGW6/sasami-magical-girls-club'>4 Sasami Magical Girls Club</a>
       <a data-tooltip="Immersive Isekai" class='hfire-link' href='https://www.crunchyroll.com/series/G24H1N3MP/mushoku-tensei-jobless-reincarnation'>5 Mushoku Tensei</a>
       <a data-tooltip="The Ultimate Anime?" class='hfire-link' href='https://www.crunchyroll.com/series/GG5H5XQX4/frieren-beyond-journeys-end'>6 Frieren: Beyond Journey's End</a>
@@ -39,7 +39,7 @@
       <!--h4 class="no-space">Great for action</h4>
       Fullmetal Alchemist: Brotherhood-->
       <h4 class="no-space">Great for laughs</h4>
-      My Deer Friend Nokotan
+      Sgt. Frog
       <h4 class="no-space">Great for laughs and magic</h4>
       Sasami Magical Girls Club, Majimoji Rurumo
       <h4 class="no-space">Great for laughs and action-adventure</h4>
@@ -54,7 +54,7 @@
       let maxRoll = 8;
       const rollTime = 750;
       const cannotRoll = [];
-      const airingNumbers = [3];
+      const airingNumbers = [];
       var askToBan = false;
       var watchedFocus = true;
       var askIfWatchedFocus = false;
@@ -107,8 +107,7 @@
               diceResults.innerHTML = `You rolled a 2!`;
               break;
             case 3:
-              diceResults.innerHTML = `You rolled a 3! Roll again or watch the latest episode.`;
-              diceRoll = resetDice(3);
+              diceResults.innerHTML = `You rolled a 3!`;
               break;
             case 4:
               diceResults.innerHTML = `You rolled a 4!`;
