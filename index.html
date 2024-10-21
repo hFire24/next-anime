@@ -33,14 +33,15 @@
       <a data-tooltip="It's Pokemon!" class='hfire-link' href='https://www.amazon.com/gp/video/detail/B016569ACQ'>2 Pokemon XY</a>
       <a data-tooltip="2000s Sci-Fi Comedy" class='hfire-link' href='https://www.crunchyroll.com/series/GG5H5XMEP/sgt-frog'>3 Sgt. Frog</a>
       <a data-tooltip="2000s Magical Girl Spin-Off" class='hfire-link' href='https://www.crunchyroll.com/series/GRK5ZZGW6/sasami-magical-girls-club'>4 Sasami Magical Girls Club</a>
-      <a data-tooltip="Iyashikei Isekai" class='hfire-link' href='https://www.crunchyroll.com/series/GP5HJ85ED/by-the-grace-of-the-gods'>5 By the Grace of the Gods</a>
-      <a data-tooltip="Anime you haven't watched in a while" class='hfire-link' href='https://anilist.co/home'>6 ⏳⏳</a>
+      <a data-tooltip="Cute Slime" class="hfire-link" href="https://www.crunchyroll.com/series/GNVHKN9G2/puniru-is-a-kawaii-slime">5 Puniru is a Kawaii Slime</a>
+      <a data-tooltip="Iyashikei Isekai" class='hfire-link' href='https://www.crunchyroll.com/series/GP5HJ85ED/by-the-grace-of-the-gods'>6 By the Grace of the Gods</a>
+      <a data-tooltip="Anime you haven't watched in a while" class='hfire-link' href='https://anilist.co/home'>7 ⏳⏳</a>
     </div>
     <div style="text-align:left;">
       <!--h4 class="no-space">Great for action</h4>
       Fullmetal Alchemist: Brotherhood-->
       <h4 class="no-space">Great for laughs</h4>
-      Sgt. Frog
+      Sgt. Frog, Puniru is a Kawaii Slime
       <h4 class="no-space">Great for magic</h4>
       Sasami Magical Girls Club, Frieren: Beyond Journey's End
       <h4 class="no-space">Great for laughs and action-adventure</h4>
@@ -49,14 +50,15 @@
       By the Grace of the Gods
     </div>
     <script>
-      var diceRoll = 0;
-      let maxRoll = 6;
+      let links = document.getElementsByClassName("hfire-link");
+      let diceRoll = 0;
+      let maxRoll = links.length;
       const rollTime = 750;
       const cannotRoll = [];
       const airingNumbers = [];
-      var askToBan = false;
-      var watchedFocus = true;
-      var askIfWatchedFocus = false;
+      let askToBan = false;
+      let watchedFocus = true;
+      let askIfWatchedFocus = false;
 
       for(let i=1; i<=maxRoll; i++) {
         let checkbox = document.createElement("input");
@@ -279,8 +281,6 @@
           diceResults.classList.remove(shake);
         }, time);
       }
-
-      var links = document.getElementsByClassName("hfire-link")
       
       for(let i = 0; i < links.length; i++) {
         let x = Math.floor(Math.random() * 128);
