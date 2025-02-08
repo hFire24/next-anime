@@ -29,22 +29,20 @@
       <button class='custom-button' onclick='rollManyDice(4)'>Roll 4 dice</button> 
     <div id='diceResults' class='space'></div>
     <div class='four-list space'>
-      <a data-tooltip="The Ultimate Anime?" class='hfire-link' href='https://www.crunchyroll.com/series/GG5H5XQX4/frieren-beyond-journeys-end'>1 Frieren: Beyond Journey's End</a>
-      <a data-tooltip="It's Pokemon!" class='hfire-link' href='https://www.amazon.com/gp/video/detail/B01C7OTMKK/'>2 Pokemon XY</a>
-      <a data-tooltip="2000s Sci-Fi Comedy" class='hfire-link' href='https://www.crunchyroll.com/series/GG5H5XMEP/sgt-frog'>3 Sgt. Frog</a>
-      <a data-tooltip="2000s Magical Girl Spin-Off" class='hfire-link' href='https://www.crunchyroll.com/series/GRK5ZZGW6/sasami-magical-girls-club'>4 Sasami Magical Girls Club</a>
-      <a data-tooltip="Cute Slime" class="hfire-link" href="https://www.crunchyroll.com/series/GNVHKN9G2/puniru-is-a-kawaii-slime">5 Puniru is a Kawaii Slime</a>
+      <a data-tooltip="It's Pokemon!" class='hfire-link' href='https://www.amazon.com/gp/video/detail/B01C7OTMKK/'>1 Pokemon XYZ</a>
+      <a data-tooltip="Super Sentai Isekai" class='hfire-link' href='https://www.crunchyroll.com/series/G8DHV788M/the-red-ranger-becomes-an-adventurer-in-another-world'>2 The Red Ranger Becomes an Adventurer in Another World</a>
+      <a data-tooltip="Work Stress Fantasy" class='hfire-link' href='https://www.crunchyroll.com/series/G8DHV784M/i-may-be-a-guild-receptionist-but-ill-solo-any-boss-to-clock-out-on-time'>3 I May Be a Guild Receptionist, but I’ll Solo Any Boss to Clock Out on Time</a>
+      <a data-tooltip="Daddy Villainess" class="hfire-link" href='https://www.hidive.com/season/28118'>4 From Bureaucrat to Villainess: Dad’s Been Reincarnated</a>
+      <a data-tooltip="2000s Sci-Fi Comedy" class='hfire-link' href='https://www.crunchyroll.com/series/GG5H5XMEP/sgt-frog'>5 Sgt. Frog</a>
       <a data-tooltip="Anime you haven't watched in a while" class='hfire-link' href='https://anilist.co/home'>6 ⏳⏳</a>
     </div>
     <div style="text-align:left;">
       <!--h4 class="no-space">Great for action</h4>
       Fullmetal Alchemist: Brotherhood-->
       <h4 class="no-space">Great for laughs</h4>
-      Sgt. Frog, Puniru is a Kawaii Slime
-      <h4 class="no-space">Great for magic</h4>
-      Sasami Magical Girls Club, Frieren: Beyond Journey's End
+      Sgt. Frog, From Bureaucrat to Villainess: Dad’s Been Reincarnated
       <h4 class="no-space">Great for laughs and action-adventure</h4>
-      Pokemon XY
+      Pokemon XYZ, The Red Ranger Becomes an Adventurer in Another World, I May Be a Guild Receptionist, but I’ll Solo Any Boss to Clock Out on Time
     </div>
     <script>
       let links = document.getElementsByClassName("hfire-link");
@@ -52,7 +50,7 @@
       let maxRoll = links.length;
       const rollTime = 750;
       const cannotRoll = [];
-      const airingNumbers = [];
+      const airingNumbers = [2, 3, 4];
       let askToBan = false;
       let watchedFocus = true;
       let askIfWatchedFocus = false;
@@ -102,13 +100,13 @@
               diceResults.innerHTML = `You rolled a 1!`;
               break;
             case 2:
-              diceResults.innerHTML = `You rolled a 2!`;
+              diceResults.innerHTML = `You rolled a 2! Roll again or watch the next unwatched episode.`;
               break;
             case 3:
-              diceResults.innerHTML = `You rolled a 3!`;
+              diceResults.innerHTML = `You rolled a 3! Roll again or watch the next unwatched episode.`;
               break;
             case 4:
-              diceResults.innerHTML = `You rolled a 4!`;
+              diceResults.innerHTML = `You rolled a 4! Roll again or watch the next unwatched episode.`;
               break;
             case 5:
               diceResults.innerHTML = `You rolled a 5!`;
